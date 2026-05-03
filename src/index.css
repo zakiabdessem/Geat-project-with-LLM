@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
+
+    --primary: 22 91% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 216 20% 96%;
+    --secondary-foreground: 215 25% 17%;
+
+    --muted: 216 16% 93%;
+    --muted-foreground: 215 12% 47%;
+
+    --accent: 204 100% 37%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 14% 90%;
+    --input: 216 14% 90%;
+    --ring: 22 91% 54%;
+
+    --radius: 0.5rem;
+
+    --geat-dark: 215 30% 16%;
+    --geat-orange: 22 91% 54%;
+    --geat-blue: 204 100% 37%;
+    --geat-light: 216 20% 96%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 9%;
+    --foreground: 216 20% 95%;
+    --card: 215 28% 13%;
+    --card-foreground: 216 20% 95%;
+    --popover: 215 28% 13%;
+    --popover-foreground: 216 20% 95%;
+    --primary: 22 91% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 216 20% 95%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 12% 60%;
+    --accent: 204 100% 37%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 22 91% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .hero-headline {
+    @apply font-heading font-bold uppercase tracking-wide leading-tight;
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+  }
+
+  .section-container {
+    @apply max-w-[1400px] mx-auto px-6 lg:px-12;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
